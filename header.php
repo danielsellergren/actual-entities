@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Actual Entities and Artificial Intelligence</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
