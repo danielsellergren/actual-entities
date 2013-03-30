@@ -6,6 +6,7 @@ body {
 div#container {
     width: 100%;
     max-width: 600px;
+    min-width: 400px;
     margin: 0 auto;
 }
 
@@ -16,6 +17,7 @@ h1#site-title {
     font-family: 'Alfa Slab One', cursive;
     margin: 20px 0 10px 0;
     padding: 0;
+    min-width: 400px;
 }
 h1#site-title a {
     color: #111111;
@@ -33,12 +35,15 @@ nav#main-nav {
 nav#main-nav ul {
     margin: 0 auto;
     width: 400px;
+    /*width: 100%;*/
+    text-align: center;
 }
 nav#main-nav ul li {
     float: left;
     font-size: 16px;
     list-style-type: none;
     margin: 0 5px;
+    /*display: inline;*/
 }
 nav#main-nav ul li a {
     background: #FF3334;
@@ -50,5 +55,40 @@ nav#main-nav ul li a {
     text-decoration: none;
 }
 nav#main-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Page Elements */
+h2 {
+    clear: both;
+    float: left;
+    margin: 20px 0;
+    font-weight: 400;
+}
+p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+footer nav {
+    text-align: center;
+    width: 125px;
+    height: 20px;
+    margin: 0 auto;
+}
+footer nav a {
+    float: left;
+    color: #FF3334;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 12px;
+}
+footer nav a:hover {
     text-decoration: underline;
 }
