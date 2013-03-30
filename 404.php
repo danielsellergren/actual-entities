@@ -1,5 +1,7 @@
-<h1>Actual Entities</h1>
+<?php require('header.php'); ?>
 
-<h2>404</h2>
+    <h2>404</h2>
 
-<p>The requested file could not be prehended.</p>
+    <p>The requested file could not be prehended.</p>
+
+<?php require('footer.php'); ?>

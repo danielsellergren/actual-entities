@@ -1,1 +1,5 @@
-<h1>Actual Entities</h1>
+<?php require('header.php'); ?>
+
+    <h2>Welcome</h2>
+
+<?php require('footer.php'); ?>
