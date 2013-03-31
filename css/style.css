@@ -62,12 +62,23 @@ nav#main-nav ul li a:hover {
 h2 {
     clear: both;
     float: left;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     font-weight: 400;
 }
 p {
-    margin: 10px 0;
+    margin: 20px 0;
     font-size: 16px;
+    clear: both;
+    float: left;
+    line-height: 26px;
+}
+a {
+    color: #FF3334;
+}
+img {
+    clear: both;
+    margin: 20px auto;
+    display: block;
 }
 
 /* Footer */
@@ -75,6 +86,7 @@ footer {
     clear: both;
     float: left;
     width: 100%;
+    margin: 20px 0 10px 0;
 }
 footer nav {
     text-align: center;
