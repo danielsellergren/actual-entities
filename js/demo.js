@@ -137,4 +137,19 @@ $(function($) {
         resizeCanvas();
     });
 
+    // Create thresholds slider
+    $( "#thresholds-slider" ).slider({
+        range: true,
+        min: 0,
+        max: 99,
+        values: [ 10, 50 ],
+        slide: function( event, ui ) {
+            $( "#thresholds-slider .ui-slider-handle" ).eq(0).html( ui.values[ 0 ] );
+            $( "#thresholds-slider .ui-slider-handle" ).eq(1).html( ui.values[ 1 ] );
+        }
+    });
+
+    $("#thresholds-slider .ui-slider-handle").eq(0).html($("#thresholds-slider").slider("values", 0));
+    $("#thresholds-slider .ui-slider-handle").eq(1).html($("#thresholds-slider").slider("values", 1));
+
 });

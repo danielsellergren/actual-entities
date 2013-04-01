@@ -16,6 +16,7 @@ section#main canvas#universe {
 aside#sidebar {
     float: left;
     width: 250px;
+    /*padding: 10px 15px;*/
     height: 100%;
     background: #EFEFEF;
 /*       -moz-box-shadow: 2px 2px 5px #888;
@@ -34,4 +35,39 @@ aside#sidebar h1 {
 aside#sidebar h1 a {
     color: #000000;
     text-decoration: none;
+}
+div#controls {
+
+}
+div#controls div.control-container {
+    margin: 10px 20px;
+}
+div#controls div.settings {
+    margin: 5px 10px;
+    font-size: 13px;
+    clear: both;
+}
+div#controls div.settings span.label {
+    display: block;
+    clear: both;
+    text-align: center;
+}
+div#controls div.ui-slider {
+    border: 1px solid #CCCCCC;
+}
+div#controls div.ui-slider div.ul-slider-range {
+    background: #AAA;
+    height: 20px;
+}
+div#controls div.ui-slider a.ui-slider-handle {
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px 5px;
+    display: block;
+    text-align: center;
+    font-family: Monaco, monospace;
+    color: #000000;
+}
+div#controls div.ui-slider a.ui-slider-handle:last-child {
+    margin-left: -20px;
 }
