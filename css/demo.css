@@ -18,9 +18,10 @@ aside#sidebar {
     width: 250px;
     height: 100%;
     background: #EFEFEF;
-       -moz-box-shadow: 2px 2px 5px #888;
+/*       -moz-box-shadow: 2px 2px 5px #888;
     -webkit-box-shadow: 2px 2px 5px #888;
-            box-shadow: 2px 2px 5px #888;
+            box-shadow: 2px 2px 5px #888;*/
+    border-right: 1px solid #CCC;
     display: block;
     overflow: auto;
 }
