@@ -15,6 +15,7 @@
 
     <aside id="sidebar">
         <h1 id="site-title"><a href="/">Actual Entities</a></h1>
+        <h2>Demo</h2>
         <div id="controls">
             <div class="control-container">
                 <div id="number-entities-setting" class="settings">
