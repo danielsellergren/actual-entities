@@ -8,14 +8,14 @@ body {
 }
 section#main {
     float: right;
-    width: 80%;
-    height: 100%;
+    display: block;
+}
+section#main canvas#universe {
     display: block;
 }
 aside#sidebar {
     float: left;
-    width: 20%;
-    min-width: 250px;
+    width: 250px;
     height: 100%;
     background: #EFEFEF;
        -moz-box-shadow: 2px 2px 5px #888;
