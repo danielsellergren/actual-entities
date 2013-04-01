@@ -14,8 +14,8 @@
         </div>
     </aside>
 
-    <section id="universe">
-
+    <section id="main">
+        <canvas id="universe">Your browser does not support the HTML5 canvas element.</canvas>
     </section>
 
 </body>
