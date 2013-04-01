@@ -46,6 +46,32 @@ function initialize() {
 
 }
 
+function mainLoop() {
+
+    setTimeout(function() {
+
+        // Randomly choose prehender and prehendee
+        prehenderIndex = Math.floor(Math.random() * (entities.length));
+        prehendeeIndex = Math.floor(Math.random() * (entities.length));
+
+        prehender = entities[prehenderIndex];
+        prehendee = entities[prehendeeIndex];
+
+        // Call prehension function
+        prehender.prehend(prehendee);
+
+        // Redraw canvas
+        draw();
+
+        // Keep loop running
+        if (running) {
+            mainLoop();
+        }
+
+    }, 100);
+
+}
+
 function resizeCanvas() {
 
     canvas.width = window.innerWidth - 251;
@@ -79,32 +105,6 @@ function draw() {
         ctx.fill();
 
     }
-
-}
-
-function mainLoop() {
-
-    setTimeout(function() {
-
-        // Randomly choose prehender and prehendee
-        prehenderIndex = Math.floor(Math.random() * (entities.length));
-        prehendeeIndex = Math.floor(Math.random() * (entities.length));
-
-        prehender = entities[prehenderIndex];
-        prehendee = entities[prehendeeIndex];
-
-        // Call prehension function
-        prehender.prehend(prehendee);
-
-        // Redraw canvas
-        draw();
-
-        // Keep loop running
-        if (running) {
-            mainLoop();
-        }
-
-    }, 100);
 
 }
 
@@ -144,6 +144,11 @@ $(function($) {
     $main = $('section#main');
     $universe = $('canvas#universe');
 
+    $thresholdsSlider = $('div#thresholds-slider');
+    $entitiesSlider = $('div#number-entities-slider');
+    $eternalsSlider = $('div#number-eternals-slider');
+    $speedSlider = $('div#speed-slider');
+
     $pause = $('button#pause');
     $resume = $('button#resume');
     $reset = $('button#reset');
@@ -164,51 +169,51 @@ $(function($) {
     $('.ui-slider').find('.ui-slider-handle').eq(1).addClass('second');
 
     // Create thresholds slider
-    $( "#thresholds-slider" ).slider({
+    $thresholdsSlider.slider({
         range: true,
         min: 0,
         max: 99,
         values: [ 10, 50 ],
-        slide: function( event, ui ) {
-            $( "#thresholds-slider .ui-slider-handle" ).eq(0).html( ui.values[ 0 ] );
-            $( "#thresholds-slider .ui-slider-handle" ).eq(1).html( ui.values[ 1 ] );
+        slide: function(event, ui) {
+            $thresholdsSlider.find('.ui-slider-handle').eq(0).html(ui.values[ 0 ]);
+            $thresholdsSlider.find('.ui-slider-handle').eq(1).html(ui.values[ 1 ]);
         }
     });
-    $("#thresholds-slider .ui-slider-handle").eq(0).html($("#thresholds-slider").slider("values", 0));
-    $("#thresholds-slider .ui-slider-handle").eq(1).html($("#thresholds-slider").slider("values", 1));
+    $thresholdsSlider.find('.ui-slider-handle').eq(0).html($thresholdsSlider.slider("values", 0));
+    $thresholdsSlider.find('.ui-slider-handle').eq(1).html($thresholdsSlider.slider("values", 1));
 
     // Create number of entities slider
-    $( "#number-entities-slider" ).slider({
+    $entitiesSlider.slider({
         min: 0,
         max: 50,
         value: 25,
-        slide: function( event, ui ) {
-            $( "#number-entities-slider .ui-slider-handle" ).html( ui.value );
+        slide: function(event, ui) {
+            $entitiesSlider.find('.ui-slider-handle').html(ui.value);
         }
     });
-    $("#number-entities-slider .ui-slider-handle").html($("#number-entities-slider").slider("value"));
+    $entitiesSlider.find('.ui-slider-handle').html($entitiesSlider.slider("value"));
 
     // Create number of eternal objects slider
-    $( "#number-eternals-slider" ).slider({
+    $eternalsSlider.slider({
         min: 0,
         max: 25,
         value: 5,
-        slide: function( event, ui ) {
-            $( "#number-eternals-slider .ui-slider-handle" ).html( ui.value );
+        slide: function(event, ui) {
+            $eternalsSlider.find('.ui-slider-handle').html(ui.value);
         }
     });
-    $("#number-eternals-slider .ui-slider-handle").html($("#number-eternals-slider").slider("value"));
+    $eternalsSlider.find('.ui-slider-handle').html($eternalsSlider.slider("value"));
 
     // Create number of eternal objects slider
-    $( "#speed-slider" ).slider({
+    $speedSlider.slider({
         min: 0,
         max: 99,
         value: 20,
-        slide: function( event, ui ) {
-            $( "#speed-slider .ui-slider-handle" ).html( ui.value );
+        slide: function(event, ui) {
+            $speedSlider.find('.ui-slider-handle').html(ui.value);
         }
     });
-    $("#speed-slider .ui-slider-handle").html($("#speed-slider").slider("value"));
+    $speedSlider.find('.ui-slider-handle').html($speedSlider.slider("value"));
 
     // Button event handlers
     $pause.on('click', function(e) {
