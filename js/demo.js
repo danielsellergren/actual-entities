@@ -1,24 +1,25 @@
 function initialize() {
 
+    // Get maximum x and y values based on size of canvas
     maxX = Math.floor(canvas.width / 10);
     maxY = Math.floor(canvas.height / 10);
 
+    // Create all entities
     for (var i=0; i<numEntities; i++) {
 
+        // Randomly choose x and y positions within range
         x = Math.floor(Math.random() * (maxX));
         y = Math.floor(Math.random() * (maxY));
 
+        // Create entity
         var entity = {
             id: i,
             x: x,
             y: y,
             prehend: function(prehendee) {
 
-                console.log("#" + this.id + " prehending #" + prehendee.id + ".");
-
                 // Calculate Euclidean distance
                 var distance = Math.sqrt( Math.pow(this.x,2) + Math.pow(prehendee.x,2) );
-                console.log("Distance: " + distance);
 
                 // Check against thresholds
                 if (distance < 10) {
@@ -38,6 +39,7 @@ function initialize() {
             },
         }
 
+        // Add to array of entities
         entities.push(entity);
 
     }
@@ -49,14 +51,11 @@ function resizeCanvas() {
     canvas.width = window.innerWidth - 251;
     canvas.height = window.innerHeight;
 
-    console.log(canvas.width);
+    draw();
 
-    draw(); 
 }
 
 function draw() {
-
-    console.log("Drawing.");
     
     if (canvas.getContext){
 
@@ -80,7 +79,7 @@ function draw() {
 
             ctx.fillStyle = "rgba(255,51,51,0.8)";
             ctx.beginPath();
-            ctx.arc(posX,posY,5,0,Math.PI*2,true); // Outer circle
+            ctx.arc(posX, posY, 5, 0, Math.PI*2, true);
             ctx.fill();
 
         }
@@ -99,10 +98,13 @@ function mainLoop() {
         prehender = entities[prehenderIndex];
         prehendee = entities[prehendeeIndex];
 
+        // Call prehension function
         prehender.prehend(prehendee);
 
+        // Redraw canvas
         draw();
 
+        // Keep loop running
         if (running) {
             mainLoop();
         }
@@ -113,26 +115,26 @@ function mainLoop() {
 
 $(function($) {
 
-    console.log('DOM loaded.');
-
-    $main = $('section#main');
-    $universe = $('canvas#universe');
+    // Global variables
     canvas = document.getElementById('universe');
-
-    numEntities = 20;
     entities = [];
-
+    numEntities = 20;
     running = true;
 
-    $(window).resize(function() {
-        resizeCanvas();
-    });
+    // jQuery variables
+    $main = $('section#main');
+    $universe = $('canvas#universe');
 
+    // Initialization
     resizeCanvas();
     initialize();
 
-    console.log(entities);
-
+    // Start loop
     mainLoop();
+
+    // Window resize handler
+    $(window).resize(function() {
+        resizeCanvas();
+    });
 
 });
