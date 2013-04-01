@@ -4,8 +4,10 @@ function initialize() {
     maxX = Math.floor(canvas.width / 10);
     maxY = Math.floor(canvas.height / 10);
 
-    // Get number of entities from slider value
+    // Get values from controls
     var numEntities = $entitiesSlider.slider("value");
+    var innerThreshold = $thresholdsSlider.slider("values",0);
+    var outerThreshold = $thresholdsSlider.slider("values",1);
 
     // Create all entities
     for (var i=0; i<numEntities; i++) {
@@ -25,9 +27,9 @@ function initialize() {
                 var distance = Math.sqrt( Math.pow(this.x,2) + Math.pow(prehendee.x,2) );
 
                 // Check against thresholds
-                if (distance < 10) {
+                if (distance < innerThreshold) {
                     // Do nothing
-                } else if (distance > 10 && distance < 50) {
+                } else if (distance > innerThreshold && distance < outerThreshold) {
                     
                     // Move x position
                     (prehendee.x > this.x) ? this.x++ : this.x--
