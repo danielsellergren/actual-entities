@@ -53,6 +53,9 @@ function initialize() {
 
 function mainLoop() {
 
+    var speed = $speedSlider.slider("value");
+    speed = (100 - 99) * 10;
+
     setTimeout(function() {
 
         // Randomly choose prehender and prehendee
@@ -73,7 +76,7 @@ function mainLoop() {
             mainLoop();
         }
 
-    }, 100);
+    }, speed);
 
 }
 
