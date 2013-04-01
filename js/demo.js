@@ -1,8 +1,18 @@
+entities = [];
+board = [];
+
 function initialize() {
 
     // Get maximum x and y values based on size of canvas
     maxX = Math.floor(canvas.width / 10);
     maxY = Math.floor(canvas.height / 10);
+
+    for (var i=0; i<maxX; i++) {
+        board[i] = [];
+        for (var j=0; j<maxY; j++) {
+            board[i][j] = 0;
+        }
+    }
 
     // Get values from controls
     var numEntities = $entitiesSlider.slider("value");
@@ -31,11 +41,29 @@ function initialize() {
                     // Do nothing
                 } else if (distance > innerThreshold && distance < outerThreshold) {
                     
-                    // Move x position
-                    (prehendee.x > this.x) ? this.x++ : this.x--
+                    var newX, newY;
 
-                    // Move y position
-                    (prehendee.y > this.y) ? this.y++ : this.y--
+                    // Calculate new x position
+                    if (prehendee.x > this.x) {
+                        newX = this.x + 1;
+                    } else {
+                        newX = this.x - 1;
+                    }
+
+                    // Calculate new y position
+                    if (prehendee.y > this.y) {
+                        newY = this.y + 1;
+                    } else {
+                        newY = this.y - 1;
+                    }
+
+                    // Check to see if new position is already taken before moving
+                    if (board[newX][newY] == 0) {
+                        board[this.x][this.y] = 0;
+                        board[newX][newY] = 1;
+                        this.x = newX;
+                        this.y = newY;
+                    }
 
                 } else {
                     //Do nothing
@@ -46,6 +74,8 @@ function initialize() {
 
         // Add to array of entities
         entities.push(entity);
+
+        board[entity.x, entity.y] = 1;
 
     }
 
@@ -144,7 +174,6 @@ $(function($) {
     // Global variables
     canvas = document.getElementById('universe');
     ctx = canvas.getContext("2d");
-    entities = [];
     numEntities = 20;
     running = true;
 
