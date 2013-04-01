@@ -4,6 +4,9 @@ function initialize() {
     maxX = Math.floor(canvas.width / 10);
     maxY = Math.floor(canvas.height / 10);
 
+    // Get number of entities from slider value
+    var numEntities = $entitiesSlider.slider("value");
+
     // Create all entities
     for (var i=0; i<numEntities; i++) {
 
@@ -153,13 +156,6 @@ $(function($) {
     $resume = $('button#resume');
     $reset = $('button#reset');
 
-    // Initialization
-    resizeCanvas();
-    initialize();
-
-    // Start loop
-    mainLoop();
-
     // Window resize handler
     $(window).resize(function() {
         resizeCanvas();
@@ -225,5 +221,12 @@ $(function($) {
     $reset.on('click', function(e) {
         reset();
     });
+
+    // Initialization
+    resizeCanvas();
+    initialize();
+
+    // Start loop
+    mainLoop();
 
 });
