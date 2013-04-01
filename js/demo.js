@@ -113,6 +113,19 @@ function mainLoop() {
 
 }
 
+function pause() {
+    $pause.hide();
+    $resume.show();
+    running = false;
+}
+
+function resume() {
+    $resume.hide();
+    $pause.show();
+    running = true;
+    mainLoop();
+}
+
 $(function($) {
 
     // Global variables
@@ -193,14 +206,10 @@ $(function($) {
 
     // Button event handlers
     $pause.on('click', function(e) {
-        e.preventDefault();
-        $pause.hide();
-        $resume.show();
+        pause();
     });
     $resume.on('click', function(e) {
-        e.preventDefault();
-        $resume.hide();
-        $pause.show();
+        resume();
     });
 
 });
