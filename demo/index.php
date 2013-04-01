@@ -34,6 +34,12 @@
                 </div>
                 <div id="thresholds-slider"></div>
             </div>
+            <div class="control-container">
+                <div id="speed-setting" class="settings">
+                    <span class="label">Speed</span>
+                </div>
+                <div id="speed-slider"></div>
+            </div>
             <button id="pause">Pause</button>
             <button id="resume">Resume</button>
             <button id="reset">Reset</button>

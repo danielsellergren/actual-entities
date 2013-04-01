@@ -67,9 +67,12 @@ div#controls div.ui-slider a.ui-slider-handle {
     text-align: center;
     font-family: Monaco, monospace;
     color: #000000;
+/*    margin-right: -20px;
+    margin-left: -20px;*/
 }
-div#controls div.ui-slider a.ui-slider-handle:last-child {
+div#controls div.ui-slider a.ui-slider-handle.second {
     margin-left: -20px;
+    margin-right: 0;
 }
 div#controls button {
     margin: 5px 25px;

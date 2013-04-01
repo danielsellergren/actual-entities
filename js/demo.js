@@ -141,6 +141,9 @@ $(function($) {
         resizeCanvas();
     });
 
+    // Add class to second handle on ranged sliders
+    $('.ui-slider').find('.ui-slider-handle').eq(1).addClass('second');
+
     // Create thresholds slider
     $( "#thresholds-slider" ).slider({
         range: true,
@@ -176,6 +179,17 @@ $(function($) {
         }
     });
     $("#number-eternals-slider .ui-slider-handle").html($("#number-eternals-slider").slider("value"));
+
+    // Create number of eternal objects slider
+    $( "#speed-slider" ).slider({
+        min: 0,
+        max: 99,
+        value: 20,
+        slide: function( event, ui ) {
+            $( "#speed-slider .ui-slider-handle" ).html( ui.value );
+        }
+    });
+    $("#speed-slider .ui-slider-handle").html($("#speed-slider").slider("value"));
 
     // Button event handlers
     $pause.on('click', function(e) {
