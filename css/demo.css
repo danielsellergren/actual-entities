@@ -40,7 +40,7 @@ div#controls {
 
 }
 div#controls div.control-container {
-    margin: 10px 20px;
+    margin: 25px 20px;
 }
 div#controls div.settings {
     margin: 5px 10px;
@@ -70,4 +70,21 @@ div#controls div.ui-slider a.ui-slider-handle {
 }
 div#controls div.ui-slider a.ui-slider-handle:last-child {
     margin-left: -20px;
+}
+div#controls button {
+    margin: 5px 25px;
+    display: inline-block;
+    background: #FF3334;
+    padding: 10px 0px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    width: 200px;
+    text-transform: uppercase;
+    cursor: hand;
+    cursor: pointer;
+}
+div#controls button#resume {
+    display: none;
+    background: #33DD34;
 }

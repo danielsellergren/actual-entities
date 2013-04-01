@@ -125,6 +125,10 @@ $(function($) {
     $main = $('section#main');
     $universe = $('canvas#universe');
 
+    $pause = $('button#pause');
+    $resume = $('button#resume');
+    $reset = $('button#reset');
+
     // Initialization
     resizeCanvas();
     initialize();
@@ -148,8 +152,41 @@ $(function($) {
             $( "#thresholds-slider .ui-slider-handle" ).eq(1).html( ui.values[ 1 ] );
         }
     });
-
     $("#thresholds-slider .ui-slider-handle").eq(0).html($("#thresholds-slider").slider("values", 0));
     $("#thresholds-slider .ui-slider-handle").eq(1).html($("#thresholds-slider").slider("values", 1));
+
+    // Create number of entities slider
+    $( "#number-entities-slider" ).slider({
+        min: 0,
+        max: 50,
+        value: 25,
+        slide: function( event, ui ) {
+            $( "#number-entities-slider .ui-slider-handle" ).html( ui.value );
+        }
+    });
+    $("#number-entities-slider .ui-slider-handle").html($("#number-entities-slider").slider("value"));
+
+    // Create number of eternal objects slider
+    $( "#number-eternals-slider" ).slider({
+        min: 0,
+        max: 25,
+        value: 5,
+        slide: function( event, ui ) {
+            $( "#number-eternals-slider .ui-slider-handle" ).html( ui.value );
+        }
+    });
+    $("#number-eternals-slider .ui-slider-handle").html($("#number-eternals-slider").slider("value"));
+
+    // Button event handlers
+    $pause.on('click', function(e) {
+        e.preventDefault();
+        $pause.hide();
+        $resume.show();
+    });
+    $resume.on('click', function(e) {
+        e.preventDefault();
+        $resume.hide();
+        $pause.show();
+    });
 
 });

@@ -17,11 +17,26 @@
         <h1 id="site-title"><a href="/">Actual Entities</a></h1>
         <div id="controls">
             <div class="control-container">
+                <div id="number-entities-setting" class="settings">
+                    <span class="label"># of Entities</span>
+                </div>
+                <div id="number-entities-slider"></div>
+            </div>
+            <div class="control-container">
+                <div id="number-eternals-setting" class="settings">
+                    <span class="label"># of Eternal Objects</span>
+                </div>
+                <div id="number-eternals-slider"></div>
+            </div>
+            <div class="control-container">
                 <div id="thresholds-setting" class="settings">
                     <span class="label">Inner/Outer Thresholds</span>
                 </div>
                 <div id="thresholds-slider"></div>
             </div>
+            <button id="pause">Pause</button>
+            <button id="resume">Resume</button>
+            <button id="reset">Reset</button>
         </div>
     </aside>
 
