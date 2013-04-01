@@ -56,35 +56,30 @@ function resizeCanvas() {
 }
 
 function draw() {
-    
-    if (canvas.getContext){
 
-        var ctx = canvas.getContext("2d");
+    clearUniverse();
 
-        ctx.clearRect(0,0,canvas.width,canvas.height);
- 
-        var gridOptions = {
-          distance : 10,
-          lineWidth : 0.1,
-          gridColor  : "#333333",
-          caption : false,
-        };
+    var gridOptions = {
+      distance : 10,
+      lineWidth : 0.1,
+      gridColor  : "#333333",
+      caption : false,
+    };
 
-        new Grid(gridOptions).draw(ctx);
+    new Grid(gridOptions).draw(ctx);
 
-        for (var i=0; i<entities.length; i++) {
+    for (var i=0; i<entities.length; i++) {
 
-            posX = (entities[i].x * 10) + 5;
-            posY = (entities[i].y * 10) + 5;
+        posX = (entities[i].x * 10) + 5;
+        posY = (entities[i].y * 10) + 5;
 
-            ctx.fillStyle = "rgba(255,51,51,0.8)";
-            ctx.beginPath();
-            ctx.arc(posX, posY, 5, 0, Math.PI*2, true);
-            ctx.fill();
-
-        }
+        ctx.fillStyle = "rgba(255,51,51,0.8)";
+        ctx.beginPath();
+        ctx.arc(posX, posY, 5, 0, Math.PI*2, true);
+        ctx.fill();
 
     }
+
 }
 
 function mainLoop() {
@@ -126,10 +121,21 @@ function resume() {
     mainLoop();
 }
 
+function reset() {
+    clearUniverse();
+    entities = [];
+    initialize();
+}
+
+function clearUniverse() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
 $(function($) {
 
     // Global variables
     canvas = document.getElementById('universe');
+    ctx = canvas.getContext("2d");
     entities = [];
     numEntities = 20;
     running = true;
@@ -210,6 +216,9 @@ $(function($) {
     });
     $resume.on('click', function(e) {
         resume();
+    });
+    $reset.on('click', function(e) {
+        reset();
     });
 
 });
