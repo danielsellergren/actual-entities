@@ -14,7 +14,7 @@ function draw() {
 
         var ctx = canvas.getContext("2d");
 
-        ctx.clearRect();
+        ctx.clearRect(0,0,canvas.width,canvas.height);
  
         var gridOptions = {
           distance : 10,
