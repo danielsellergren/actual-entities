@@ -1,4 +1,4 @@
-# Actual Entities with Canvas & JavaScript
+# Actual Entities with Canvas
 
 ## Overview
 
