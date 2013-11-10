@@ -17,7 +17,7 @@ function initialize() {
     // Get values from controls
     var numEntities = $entitiesSlider.slider("value");
     var innerThreshold = $thresholdsSlider.slider("values",0);
-    var outerThreshold = $thresholdsSlider.slider("values",1);
+    var outerThreshold = $thresholdsSlider.slider("values",1) * 5;
 
     // Create all entities
     for (var i=0; i<numEntities; i++) {
@@ -45,24 +45,26 @@ function initialize() {
 
                     // Calculate new x position
                     if (prehendee.x > this.x) {
-                        newX = this.x + 1;
+                        newX = this.x + 2;
                     } else {
-                        newX = this.x - 1;
+                        newX = this.x - 2;
                     }
 
                     // Calculate new y position
                     if (prehendee.y > this.y) {
-                        newY = this.y + 1;
+                        newY = this.y + 2;
                     } else {
-                        newY = this.y - 1;
+                        newY = this.y - 2;
                     }
 
                     // Check to see if new position is already taken before moving
                     if (board[newX][newY] == 0) {
-                        board[this.x][this.y] = 0;
-                        board[newX][newY] = 1;
-                        this.x = newX;
-                        this.y = newY;
+                        if (newX < maxX && newY < maxY && newX > 0 && newY > 0) {
+                            board[this.x][this.y] = 0;
+                            board[newX][newY] = 1;
+                            this.x = newX;
+                            this.y = newY;
+                        }
                     }
 
                 } else {
