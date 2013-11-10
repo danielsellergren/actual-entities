@@ -37,6 +37,7 @@ nav#main-nav ul {
     width: 400px;
     /*width: 100%;*/
     text-align: center;
+    float: none;
 }
 nav#main-nav ul li {
     float: left;
@@ -79,6 +80,10 @@ img {
     clear: both;
     margin: 20px auto;
     display: block;
+}
+ul, ol {
+    clear: both;
+    float: left;
 }
 
 /* Footer */
