@@ -10,9 +10,11 @@ Whitehead is best known for his philosophical treatise [Process and Reality](htt
 
 In *Process and Reality*, Whitehead proposed that the universe is populated entirely by Actual Entities (AEs), Eternal Objects (EOs), and a principal object known as God. In this philosophical master work, all things are occasions of existence or "moments" and the process by which they change is the creative act of becoming.
 
-[SAMPLE IMAGE OF UNIVERSE WITH ALL THREE TYPES]
+[0: SAMPLE IMAGE OF UNIVERSE WITH ALL THREE TYPES]
 
 ## Actual Entities
+
+### What is an Actual Entity?
 
 According to Whitehead, the universe does not consist of substances, but rather an abundance of processes which consist of "moments" or "occasions". These "occasions" are the actual entities themselves. Along with the AEs, the universe also consists of two other types known as Eternal Objects (EOs) and a non-temporal being termed God.
 
@@ -20,15 +22,25 @@ According to Whitehead, the universe does not consist of substances, but rather 
 
 The growth from phase to phase is called "concrescence" with the final result being termed "concretion".
 
-Additionally, actual entities are not everyday objects. Neither the books on your shelf, nor the people in your life are individual actual entities. Instead, picture yourself and everyone else as great "societies" of actual entities. A multitude of actual entities working as atomic elements, but also part of a functional whole. A single actual entity is much closer to a quantum vibration than an organism.
- 
-These occasions have a direction, which can be thought of as succession in most cases. In other words, occasions or entities follow from previous occasions according to certain rules.
+[1: DIAGRAM OF BASIC ACTUAL ENTITY PHASES AND CONCRESCENCE]
 
-[IMAGE OF ACTUAL ENTITIES IN ORDER, POTENTIALLY WITH ARROWS?]
+Additionally, actual entities are not everyday objects. Neither the books on your shelf, nor the people in your life are individual actual entities. Instead, picture yourself and everyone else as great "societies" of actual entities. A multitude of actual entities working as atomic elements, but also part of a functional whole. A single actual entity is much closer to a quantum vibration than an organism.
+
+[2: DIAGRAM OF SOCIETIES OF ACTUAL ENTITIES]
+
+### How is an Actual Entity created?
 
 So how are Actual Entities created? Each Actual Entity is a creative act, that looks at every other object in the universe and then builds a new and unique reflection of the universe. This reflection of the immediate settled state of the universe is itself the Actual Entity.
 
-[IMAGE SHOWING BASIC OVERVIEW OF PREHENSION AND ENTITY CREATION]
+[3: DIAGRAM SHOWING BASIC OVERVIEW OF PREHENSION AND ENTITY CREATION]
+
+We can think about an Actual Entity in terms of its two sides: the subject and the object.
+
+The subject is the entity's immediate, private experience. When thinking about human beings this is generally thought of as consciousness, but it extends to a lesser extent in unconscious objects such as trees and rocks and then even further to the smallest societies of entities and their constituent occasions.
+
+The object is the sum of the experiences of the subject. It is the external part of the entity which has the potential for being experienced by other entities in the universe. When a subject looks at an object, that object is reflected in the creation of the process. The experience of any given subject is dependent on the experiences of the object it is looking at.
+
+[4: DIAGRAM SHOWING BOTH SIDES OF AN ACTUAL ENTITY AND HOW THEY INTERACT]
 
 ## The Doctrine of Prehensions
 
