@@ -11,3 +11,5 @@ Actual Entities are a concept in Aritificial Intelligence theory which stems fro
 * Add introductory text to Welcome page
 * Add basic Eternal Object examples to Demo
 * Build more examples of how to use Actual Entities to solve problems
+* Convert to use SASS/Compass for styling
+* Make mobile friendly for phones and tablets
