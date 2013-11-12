@@ -65,11 +65,13 @@ Think of a prehension as an operation with three steps:
 
 The prehensions discussed so far have all been positive prehensions. But there are also negative prehensions which mean that after the data has been objectified and interpreted, the subject entity deems that it is unimportant for development and rejects or ignores it. This decision may seem trivial, but not choosing to let something affect an entity is just as important as the decision to make changes.
 
+### Eternal Objects
 
-
-## Satisfaction and Value
+The other objects in the universe other than actual entities are eternal objects, which do not prehend or have subjectivity, but can be prehended by each actual entity. The eternal object's purpose is to lend a definiteness to the actual entity, to provide it with a way of looking at the universe and interpreting what it sees. Essentially, the rules by which each actual entity makes the decision as to how an experience will affect them are determined by the definite eternal objects which were part of the cause of their initial novel synthesis.
 
 ## Use in Computer Science
+
+The philosophical concepts of Whitehead's process philosophy have been applied to several areas of artificial intelligence and machine learning. These areas include but are not limited to optimization problems, local minima and maxima, swarm theory, data clustering, genetic algorithms, and others. You can read much more about the applications of actual entities to artificial intelligence in the next section.
 
 ## References
 
