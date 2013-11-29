@@ -1,5 +1,6 @@
 entities = [];
 board = [];
+teams = ['red', 'blue'];
 
 function initialize() {
 
@@ -31,6 +32,7 @@ function initialize() {
             id: i,
             x: x,
             y: y,
+            team: teams[Math.floor(Math.random() * teams.length)],
             prehend: function(prehendee) {
 
                 // Calculate Euclidean distance
@@ -139,7 +141,11 @@ function draw() {
         posX = (entities[i].x * 10) + 5;
         posY = (entities[i].y * 10) + 5;
 
-        ctx.fillStyle = "rgba(255,51,51,0.8)";
+        if (entities[i].team === 'red') {
+            ctx.fillStyle = "rgba(255,51,51,0.8)";
+        } else if (entities[i].team === 'blue') {
+            ctx.fillStyle = "rgba(51,51,255,0.8)";
+        }
         ctx.beginPath();
         ctx.arc(posX, posY, 5, 0, Math.PI*2, true);
         ctx.fill();
