@@ -38,6 +38,8 @@ function initialize() {
                 // Calculate Euclidean distance
                 var distance = Math.sqrt( Math.pow(this.x,2) + Math.pow(prehendee.x,2) );
 
+                console.log(distance);
+
                 // Check against thresholds
                 if (distance < innerThreshold) {
                     // Do nothing
@@ -45,23 +47,35 @@ function initialize() {
                     
                     var newX, newY;
 
-                    // Calculate new x position
-                    if (prehendee.x > this.x) {
-                        newX = this.x + 2;
+                    // Calculate new x and y positions if teams match
+                    if (prehendee.team === this.team) {
+                        if (prehendee.x > this.x) {
+                            newX = this.x + 2;
+                        } else {
+                            newX = this.x - 2;
+                        }
+                        if (prehendee.y > this.y) {
+                            newY = this.y + 2;
+                        } else {
+                            newY = this.y - 2;
+                        }
+                    // Calculate new x and y positions if teams do not match
                     } else {
-                        newX = this.x - 2;
-                    }
-
-                    // Calculate new y position
-                    if (prehendee.y > this.y) {
-                        newY = this.y + 2;
-                    } else {
-                        newY = this.y - 2;
+                        if (prehendee.x > this.x) {
+                            newX = this.x - 1;
+                        } else {
+                            newX = this.x + 1;
+                        }
+                        if (prehendee.y > this.y) {
+                            newY = this.y - 1;
+                        } else {
+                            newY = this.y + 1;
+                        }
                     }
 
                     // Check to see if new position is already taken before moving
-                    if (board[newX][newY] == 0) {
-                        if (newX < maxX && newY < maxY && newX > 0 && newY > 0) {
+                    if (newX < maxX && newY < maxY && newX > 0 && newY > 0) {
+                        if (board[newX][newY] == 0) {
                             board[this.x][this.y] = 0;
                             board[newX][newY] = 1;
                             this.x = newX;
