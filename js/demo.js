@@ -236,9 +236,9 @@ $(function($) {
 
     // Create number of entities slider
     $entitiesSlider.slider({
-        min: 0,
-        max: 50,
-        value: 25,
+        min: 1,
+        max: 100,
+        value: 50,
         slide: function(event, ui) {
             $entitiesSlider.find('.ui-slider-handle').html(ui.value);
         }
